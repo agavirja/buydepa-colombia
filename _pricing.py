@@ -15,6 +15,7 @@ from scripts.ANNtest import pricingforecast
 from scripts.pricing_ponderador import pricing_ponderador
 from scripts.circle_polygon import circle_polygon
 
+url = "https://buydepa-colombia.streamlit.app/"
 
 def roundnumbers(x):
     thresholds = [1000000000, 100000000, 1000000, 100000, 10000]
@@ -255,7 +256,7 @@ def main():
             if isinstance(inmueble['imagen_principal'], str) and len(inmueble['imagen_principal'])>20: imagen_principal =  inmueble['imagen_principal']
             else: imagen_principal = "https://personal-data-bucket-online.s3.us-east-2.amazonaws.com/sin_imagen.png"
             caracteristicas = f'<strong>{inmueble["areaconstruida"]}</strong> mt<sup>2</sup> | <strong>{int(inmueble["habitaciones"])}</strong> hab | <strong>{int(inmueble["banos"])}</strong> baños | <strong>{int(inmueble["garajes"])}</strong> pq'
-            url_export      = f"http://localhost:8501/Ficha?code={inmueble['code']}&tiponegocio={tiponegocio}&tipoinmueble={tipoinmueble}"
+            url_export      = f"{url}/Ficha?code={inmueble['code']}&tiponegocio={tiponegocio}&tipoinmueble={tipoinmueble}"
             
             if pd.isnull(inmueble['direccion']): direccionlabel = '<p class="caracteristicas-info">&nbsp</p>'
             else: direccionlabel = f'''<p class="caracteristicas-info">Dirección: {inmueble['direccion'][0:35]}</p>'''

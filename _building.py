@@ -19,6 +19,7 @@ from scripts.coddir import coddir
 # st.write(str(st.secrets._file_path))
 # st.write(str(st.secrets.get))
 
+url = "https://buydepa-colombia.streamlit.app/"
 
 # https://oficinavirtual.shd.gov.co/ConsultaPagos/ConsultaPagos.html
 
@@ -1008,7 +1009,7 @@ def main():
                     except: garajes_inmueble = ""
                         
                     propertyinfo = f'<strong>{inmueble["areaconstruida"]}</strong> mt<sup>2</sup> | <strong>{int(inmueble["habitaciones"])}</strong> hab | <strong>{int(inmueble["banos"])}</strong> baños {garajes_inmueble}'
-                    url_export   = f"http://localhost:8501/Ficha?code={inmueble['code']}&tiponegocio=Venta&tipoinmueble=Apartamento" 
+                    url_export   = f"{url}/Ficha?code={inmueble['code']}&tiponegocio=Venta&tipoinmueble=Apartamento" 
         
                     if isinstance(inmueble['direccion'], str): direccion = inmueble['direccion'][0:35]
                     else: direccion = '&nbsp'
@@ -1068,7 +1069,7 @@ def main():
                     except: garajes_inmueble = ""
                         
                     propertyinfo = f'<strong>{inmueble["areaconstruida"]}</strong> mt<sup>2</sup> | <strong>{int(inmueble["habitaciones"])}</strong> hab | <strong>{int(inmueble["banos"])}</strong> baños {garajes_inmueble}'
-                    url_export   = f"http://localhost:8501/Ficha?code={inmueble['code']}&tiponegocio=Arriendo&tipoinmueble=Apartamento" 
+                    url_export   = f"{url}/Ficha?code={inmueble['code']}&tiponegocio=Arriendo&tipoinmueble=Apartamento" 
         
                     if isinstance(inmueble['direccion'], str): direccion = inmueble['direccion'][0:35]
                     else: direccion = '&nbsp'

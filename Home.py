@@ -10,7 +10,7 @@ if 'layout' not in st.session_state:
    
 st.set_page_config(layout=st.session_state.layout)
 
-url = 'http://localhost:8501'
+url = "https://buydepa-colombia.streamlit.app/"
 
 #st.set_page_config(layout="wide",initial_sidebar_state="collapsed")
 
