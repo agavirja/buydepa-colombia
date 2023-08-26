@@ -4,7 +4,6 @@ import pandas as pd
 import numpy as np
 import pickle
 import streamlit.components.v1 as components
-import sklearn
 from sklearn.preprocessing import LabelEncoder
 
 from bs4 import BeautifulSoup
