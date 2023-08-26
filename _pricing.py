@@ -407,15 +407,15 @@ def getforecast(inputvar):
         
         #---------------------------------------------------------------------#
         # Codificacion
-        pickle_file_path = r"D:\Dropbox\Empresa\Buydepa\COLOMBIA\PRICING MODEL\RESULTADOS\colombia_bogota_scacodigo.pkl"
+        pickle_file_path = "data/colombia_bogota_scacodigo.pkl"
         with open(pickle_file_path, "rb") as f:
             barrio_codigo = pickle.load(f)
     
-        pickle_file_path = r"D:\Dropbox\Empresa\Buydepa\COLOMBIA\PRICING MODEL\RESULTADOS\colombia_bogota_tiempoconstruido.pkl"
+        pickle_file_path = "data/colombia_bogota_tiempoconstruido.pkl"
         with open(pickle_file_path, "rb") as f:
             tiempodeconstruido_codigo = pickle.load(f)
             
-        pickle_file_path = r"D:\Dropbox\Empresa\Buydepa\COLOMBIA\PRICING MODEL\RESULTADOS\colombia_bogota_variables.pkl"
+        pickle_file_path = "data/colombia_bogota_variables.pkl"
         with open(pickle_file_path, "rb") as f:
             variables = pickle.load(f)
     
@@ -426,7 +426,7 @@ def getforecast(inputvar):
         # Modelo XGboosting
         for tiponegocio in ['Venta','Arriendo']:
             
-            pickle_file_path = rf"D:\Dropbox\Empresa\Buydepa\COLOMBIA\PRICING MODEL\RESULTADOS\xgboosting_{tiponegocio.lower()}_{tipoinmueble.lower()}.pkl"
+            pickle_file_path = f"data/xgboosting_{tiponegocio.lower()}_{tipoinmueble.lower()}.pkl"
             with open(pickle_file_path, 'rb') as file:
                 model = pickle.load(file)
             
@@ -440,7 +440,7 @@ def getforecast(inputvar):
         # Modelo ANN
         for tiponegocio in ['Venta','Arriendo']:
 
-            pickle_file_path = rf"D:\Dropbox\Empresa\Buydepa\COLOMBIA\PRICING MODEL\RESULTADOS\ANN_bogota_{tiponegocio.lower()}_{tipoinmueble.lower()}"
+            pickle_file_path = f"data/ANN_bogota_{tiponegocio.lower()}_{tipoinmueble.lower()}"
             model            = pd.read_pickle(pickle_file_path,compression='gzip')
             salida           = model['salida'].iloc[0]
             forecastlist[tiponegocio.lower()].append({'model':'forecast_model','value':pricingforecast(salida,inputvar)['valorestimado']})

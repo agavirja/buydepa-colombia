@@ -12,6 +12,7 @@ st.set_page_config(layout=st.session_state.layout)
 
 url = "https://buydepa-colombia.streamlit.app/"
 
+
 #st.set_page_config(layout="wide",initial_sidebar_state="collapsed")
 
 
