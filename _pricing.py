@@ -4,7 +4,6 @@ import pandas as pd
 import numpy as np
 import pickle
 import streamlit.components.v1 as components
-import xgboost as xgb
 
 from bs4 import BeautifulSoup
 from shapely import wkt
@@ -31,7 +30,6 @@ def convert_df(df):
    return df.to_csv(index=False).encode('utf-8')
 
 def main():
-    dir(xgb)
     formato = {
                 'show':False,
                }
@@ -407,34 +405,12 @@ def getforecast(inputvar):
         barriopricing,barriocaracterizacion,barriovalorizacion = getdatanivel6(scacodigo)
         
         #---------------------------------------------------------------------#
-        # Codificacion
-        pickle_file_path = "data/colombia_bogota_variables.pkl"
-        st.write(pickle_file_path)
-        st.write(dir(pickle))
-        with open(pickle_file_path, "rb") as f:
-            variables = pickle.load(f)
-        st.write(variables)
-            
-        for tiponegocio in ['Venta','Arriendo']:
-            st.write('XGboosting')
-            pickle_file_path = f"data/xgboosting_{tiponegocio.lower()}_{tipoinmueble.lower()}.pkl"
-            st.write(pickle_file_path)
-            with open(pickle_file_path, 'rb') as file:
-                model = pickle.load(file)
-            st.write(dir(model))
-            
-            
-            pickle_file_path = f"data/ANN_bogota_{tiponegocio.lower()}_{tipoinmueble.lower()}"
-            model            = pd.read_pickle(pickle_file_path,compression='gzip')
-            st.write('Model ANN')
-            st.write(list(model))
-    
-                
-        
-        
+        # Codificacion       
         pickle_file_path = "data/colombia_bogota_scacodigo.pkl"
+        st.write(pickle_file_path)
         with open(pickle_file_path, "rb") as f:
             barrio_codigo = pickle.load(f)
+        st.write(dir(barrio_codigo))
     
         pickle_file_path = "data/colombia_bogota_tiempoconstruido.pkl"
         with open(pickle_file_path, "rb") as f:

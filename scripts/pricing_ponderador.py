@@ -9,7 +9,7 @@ def pricing_ponderador(x):
     listamodels = list(p['model'].unique())
     
     # D:\Dropbox\Empresa\Buydepa\COLOMBIA\PRICING MODEL\build_ponderaciones_models
-    pickle_file_path = r"D:\Dropbox\Empresa\Buydepa\COLOMBIA\PRICING MODEL\RESULTADOS\ponderacion_modelos.pkl"
+    pickle_file_path = "data/ponderacion_modelos.pkl"
     with open(pickle_file_path, "rb") as f:
         ponderadores = pickle.load(f)
     
