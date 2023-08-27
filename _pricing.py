@@ -4,6 +4,7 @@ import pandas as pd
 import numpy as np
 import pickle
 import streamlit.components.v1 as components
+import xgboost as xgb
 
 from bs4 import BeautifulSoup
 from shapely import wkt
@@ -30,7 +31,7 @@ def convert_df(df):
    return df.to_csv(index=False).encode('utf-8')
 
 def main():
-    
+    dir(xgb)
     formato = {
                 'show':False,
                }
