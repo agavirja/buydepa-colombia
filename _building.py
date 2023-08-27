@@ -93,11 +93,11 @@ def main():
         if st.button('Buscar'):
             if direccion!='': 
                 st.session_state.coddir    = coddir(direccion)
-                st.session_state.ed_dir    = ''
-                st.session_state.ed_nombre = ''
-                del st.session_state['options_ed_dir']
-                del st.session_state['options_ed_nombre']
-                st.experimental_rerun()
+                #st.session_state.ed_dir    = ''
+                #st.session_state.ed_nombre = ''
+                #del st.session_state['options_ed_dir']
+                #del st.session_state['options_ed_nombre']
+                #st.experimental_rerun()
 
 
     if st.session_state.coddir!='':
