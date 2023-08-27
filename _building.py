@@ -60,7 +60,6 @@ def main():
                 'coddir':'',
                 'ed_nombre':'',
                 'ed_dir':'',
-                'selected_option':'Opción 2'
                }
     
     for key,value in formato.items():
@@ -93,8 +92,10 @@ def main():
         st.write('')
         if st.button('Buscar'):
             if direccion!='': 
-                st.session_state.coddir = coddir(direccion)
-                #tracking(st.session_state.email,'building',st.session_state.coddir)
+                st.session_state.coddir            = coddir(direccion)
+                st.session_state.options_ed_dir    = ''
+                st.session_state.options_ed_nombre = ''
+                st.experimental_rerun()
 
 
     if st.session_state.coddir!='':
