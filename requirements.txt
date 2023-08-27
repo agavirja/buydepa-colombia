@@ -13,4 +13,5 @@ shapely
 SQLAlchemy
 streamlit
 streamlit_folium
+xgboost
 scikit-learn
