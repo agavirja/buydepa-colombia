@@ -34,8 +34,7 @@ def conjuntos_direcciones():
         data.loc[idd,'nombre_conjunto'] = data.loc[idd,'nombre_conjunto'].apply(lambda x: x.strip('"'))
     data['via'] = data['direccion'].apply(lambda x: dir2comp(x,0))
     v           = data['via'].value_counts().reset_index()
-    st.write(list(v))
-    st.dataframe(v)
+    v.columns   = ['index','via']
     v           = v[v['via']>50]
     idd         = data['via'].isin(v['index'])
     if sum(~idd)>0:
