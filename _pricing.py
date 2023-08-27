@@ -4,7 +4,6 @@ import pandas as pd
 import numpy as np
 import pickle
 import streamlit.components.v1 as components
-from sklearn.preprocessing import LabelEncoder
 
 from bs4 import BeautifulSoup
 from shapely import wkt
@@ -408,9 +407,15 @@ def getforecast(inputvar):
         
         #---------------------------------------------------------------------#
         # Codificacion
-        pickle_file_path = "data/colombia_bogota_scacodigo.pkl"
+        pickle_file_path = "data/colombia_bogota_variables.pkl"
         st.write(pickle_file_path)
         st.write(dir(pickle))
+        with open(pickle_file_path, "rb") as f:
+            variables = pickle.load(f)
+        st.write(variables)
+            
+        pickle_file_path = "data/colombia_bogota_scacodigo.pkl"
+
         with open(pickle_file_path, "rb") as f:
             barrio_codigo = pickle.load(f)
     
