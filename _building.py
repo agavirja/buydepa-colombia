@@ -1224,7 +1224,7 @@ def main():
                 if i.empty is False:
                     varnew = [w for w in variables if w in list(i)]
                     if varnew!=[]:
-                        dataphone = pd.concat(dataphone,i[varnew])
+                        dataphone = pd.concat([dataphone,i[varnew]])
                         #dataphone = dataphone.append(i[varnew])
                         
             if dataphone.empty is False:
