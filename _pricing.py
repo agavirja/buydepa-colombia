@@ -407,11 +407,9 @@ def getforecast(inputvar):
         #---------------------------------------------------------------------#
         # Codificacion       
         pickle_file_path = "data/colombia_bogota_scacodigo.pkl"
-        st.write(pickle_file_path)
         with open(pickle_file_path, "rb") as f:
             barrio_codigo = pickle.load(f)
-        st.write(dir(barrio_codigo))
-    
+            
         pickle_file_path = "data/colombia_bogota_tiempoconstruido.pkl"
         with open(pickle_file_path, "rb") as f:
             tiempodeconstruido_codigo = pickle.load(f)
