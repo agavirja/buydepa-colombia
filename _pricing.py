@@ -414,8 +414,24 @@ def getforecast(inputvar):
             variables = pickle.load(f)
         st.write(variables)
             
+        for tiponegocio in ['Venta','Arriendo']:
+            st.write('XGboosting')
+            pickle_file_path = f"data/xgboosting_{tiponegocio.lower()}_{tipoinmueble.lower()}.pkl"
+            st.write(pickle_file_path)
+            with open(pickle_file_path, 'rb') as file:
+                model = pickle.load(file)
+            st.write(dir(model))
+            
+            
+            pickle_file_path = f"data/ANN_bogota_{tiponegocio.lower()}_{tipoinmueble.lower()}"
+            model            = pd.read_pickle(pickle_file_path,compression='gzip')
+            st.write('Model ANN')
+            st.write(list(model))
+    
+                
+        
+        
         pickle_file_path = "data/colombia_bogota_scacodigo.pkl"
-
         with open(pickle_file_path, "rb") as f:
             barrio_codigo = pickle.load(f)
     
