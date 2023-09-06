@@ -334,7 +334,12 @@ def main():
                       </td>
                       <td class="align-middle text-center text-sm" style="border-top:none; border-left:none;border-right:none;border-bottom: 1px solid #ccc;">
                         <h6 class="mb-0 text-sm">{i['Valor']}</h6>
-                      </td>                      
+                      </td>
+                      <td class="align-middle text-center text-sm" style="border: none;padding: 8px;">
+                        <a href="https://radicacion.supernotariado.gov.co/app/static/ServletFilesViewer?docId={i['docid']}" target="_blank">
+                          <img src="https://personal-data-bucket-online.s3.us-east-2.amazonaws.com/publicimg/pdf.png" alt="link" width="20" height="20">
+                        </a>                    
+                      </td>
                     </tr>     
                     """
                 snr_tabla = f"""
@@ -343,9 +348,10 @@ def main():
                       <thead>
                         <tr style="margin-bottom: 0px;">
                           <th class="align-middle text-center" style="border-top:none; border-left:none;border-right:none;border-bottom: 1px solid #ccc;">Predio</th>
-                          <th class="align-middle text-center" style="border-top:none; border-left:none;border-right:none;border-bottom: 1px solid #ccc;">Area construida</th>
+                          <th class="align-middle text-center" style="border-top:none; border-left:none;border-right:none;border-bottom: 1px solid #ccc;">Área construida</th>
                           <th class="align-middle text-center" style="border-top:none; border-left:none;border-right:none;border-bottom: 1px solid #ccc;">Fecha</th>
                           <th class="align-middle text-center" style="border-top:none; border-left:none;border-right:none;border-bottom: 1px solid #ccc;">Valor</th>
+                          <th class="align-middle text-center" style="border-top:none; border-left:none;border-right:none;border-bottom: 1px solid #ccc;">Link</th>
                         </tr>
                       </thead>
                       <tbody>
