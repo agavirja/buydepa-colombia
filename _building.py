@@ -1037,11 +1037,10 @@ def main():
                         </div>
                       </div>
                       '''
-    
             #-------------------------------------------------------------------------#
             # OFERTA - ARRIENDO
             #-------------------------------------------------------------------------#
-            arriendo_oferta   = '<p class="mb-0 text" style="font-weight: 300; font-size: 1rem; text-align: center;">No se encontraron inmuebles en arriendo</p>'
+            arriendo_oferta   = ""
             arriendo_valormt2 = ""
             arriendo_imagenes = ""
             if datamarketarriendo.empty is False:
@@ -1098,6 +1097,8 @@ def main():
                       </div>
                       '''
             if venta_oferta!= "" or venta_valormt2!= "" or venta_imagenes!= "" or arriendo_oferta!= "" or arriendo_valormt2!="" or arriendo_imagenes!= "":  
+                if venta_oferta=="": venta_oferta = '<p class="mb-0 text" style="font-weight: 300; font-size: 1rem; text-align: center;">No se encontraron inmuebles en venta</p>'
+                if arriendo_oferta=="": arriendo_oferta = '<p class="mb-0 text" style="font-weight: 300; font-size: 1rem; text-align: center;">No se encontraron inmuebles en arriendo</p>'
                 style = """
                     <style>
                       .contenedor-propiedades {
