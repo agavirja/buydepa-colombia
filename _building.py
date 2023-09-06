@@ -255,7 +255,6 @@ def main():
             snr_valorxmt2     = ""
             snr_tabla         = ""
             dataprocesosdocid = dataprocesos.copy()
-            st.write(list(dataprocesosdocid))
             if dataprocesos.empty is False:
                 dataprocesos = dataprocesos[dataprocesos['codigo'].isin(['0125','125','0168','168'])]
                 
@@ -315,7 +314,7 @@ def main():
                     """ 
     
                 # Tabla
-                datatable            = dataprocesos[['direccion', 'areaconstruida', 'fecha_documento_publico', 'cuantia']].copy()
+                datatable            = dataprocesos[['docid','direccion', 'areaconstruida', 'fecha_documento_publico', 'cuantia']].copy()
                 datatable['cuantia'] = datatable['cuantia'].apply(lambda x: f'${x:,.0f}')
                 datatable['fecha_documento_publico'] = datatable['fecha_documento_publico'].apply(lambda x: x.strftime('%Y-%m-%d'))
                 datatable.rename(columns={'direccion': 'Predio','areaconstruida':'Area construida', 'nombre': 'Tipo de proceso', 'tarifa': 'Tarifa', 'cuantia': 'Valor', 'tipo_documento_publico': 'Tipo', 'numero_documento_publico': '# documento', 'fecha_documento_publico': 'Fecha', 'oficina': 'Oficina registro', 'entidad': 'Notaria'},inplace=True)
