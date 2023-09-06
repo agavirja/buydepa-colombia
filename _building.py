@@ -407,6 +407,7 @@ def main():
                         </div>
                         """                    
                 
+                datapredios = datapredios.sort_values(by=['preaconst'],ascending=False)
                 for _,i in datapredios.iterrows():
                     html_tabla += f""" 
                     <tr>
