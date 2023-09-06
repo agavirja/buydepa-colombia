@@ -1041,7 +1041,7 @@ def main():
             #-------------------------------------------------------------------------#
             # OFERTA - ARRIENDO
             #-------------------------------------------------------------------------#
-            arriendo_oferta   = ""
+            arriendo_oferta   = '<p class="mb-0 text" style="font-weight: 300; font-size: 1rem; text-align: center;">No se encontraron inmuebles en arriendo</p>'
             arriendo_valormt2 = ""
             arriendo_imagenes = ""
             if datamarketarriendo.empty is False:
