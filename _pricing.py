@@ -255,7 +255,7 @@ def main():
             if isinstance(inmueble['imagen_principal'], str) and len(inmueble['imagen_principal'])>20: imagen_principal =  inmueble['imagen_principal']
             else: imagen_principal = "https://personal-data-bucket-online.s3.us-east-2.amazonaws.com/sin_imagen.png"
             caracteristicas = f'<strong>{inmueble["areaconstruida"]}</strong> mt<sup>2</sup> | <strong>{int(inmueble["habitaciones"])}</strong> hab | <strong>{int(inmueble["banos"])}</strong> baños | <strong>{int(inmueble["garajes"])}</strong> pq'
-            url_export      = f"{url}/Ficha?code={inmueble['code']}&tiponegocio={tiponegocio}&tipoinmueble={tipoinmueble}"
+            url_export      = f"{url}/Ficha_del_inmueble?code={inmueble['code']}&tiponegocio={tiponegocio}&tipoinmueble={tipoinmueble}"
             
             if pd.isnull(inmueble['direccion']): direccionlabel = '<p class="caracteristicas-info">&nbsp</p>'
             else: direccionlabel = f'''<p class="caracteristicas-info">Dirección: {inmueble['direccion'][0:35]}</p>'''
