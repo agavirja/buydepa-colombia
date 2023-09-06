@@ -98,7 +98,7 @@ def main():
                       <h3 class="font-weight-bolder mb-0" style="text-align: center;font-size: 1.5rem;">${roundnumbers(forecast_venta/areaconstruida):,.0f}<span style="font-size: 0.8rem; color: grey;margin-left:10px;">mt<sup>2</sup></span></h3>
                     </div>                  
                   </div>
-                  <h3 class="font-weight-bolder mb-0" style="text-align: center;font-size: 1.2rem;color:grey;">Precio de venta</h3>
+                  <h3 class="font-weight-bolder mb-0" style="text-align: center;font-size: 1.2rem;color:grey;">Precio de referencia de venta</h3>
                 </div>
               </div>
             </div>
@@ -114,7 +114,7 @@ def main():
                       <h3 class="font-weight-bolder mb-0" style="text-align: center;font-size: 1.5rem;">${roundnumbers(forecast_arriendo/areaconstruida):,.0f}<span style="font-size: 0.8rem; color: grey;margin-left:10px;">mt<sup>2</sup></span></h3>
                     </div>                  
                   </div>
-                  <h3 class="font-weight-bolder mb-0" style="text-align: center;font-size: 1.2rem;color:grey;">Precio de arriendo</h3>
+                  <h3 class="font-weight-bolder mb-0" style="text-align: center;font-size: 1.2rem;color:grey;">Precio de referencia de arriendo</h3>
                 </div>
               </div>
             </div>
