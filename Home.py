@@ -186,7 +186,7 @@ if st.session_state.access:
       </div>
       <div class="grid-item">
         <a href="{url}/Analisis_del_edificio?token={st.session_state.token}">
-          <img src="https://personal-data-bucket-online.s3.us-east-2.amazonaws.com/buydepa/2_1_building_analysis.png" width="400" height="300">
+          <img src="https://personal-data-bucket-online.s3.us-east-2.amazonaws.com/buydepa/2_1_building_analisis.png" width="400" height="300">
         </a>
         <p>Análisis por Edificio</p>
       </div>
