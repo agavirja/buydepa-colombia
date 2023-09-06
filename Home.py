@@ -180,25 +180,25 @@ if st.session_state.access:
     <div class="grid-container">
       <div class="grid-item">
         <a href="{url}/Buscador_de_inmuebles?token={st.session_state.token}">
-          <img src="https://personal-data-bucket-online.s3.us-east-2.amazonaws.com/buydepa/1_listings.png" width="400" height="300">
+          <img src="https://personal-data-bucket-online.s3.us-east-2.amazonaws.com/buydepa/1_1_listings.png" width="400" height="300">
         </a>
         <p>Buscador de inmuebles</p>
       </div>
       <div class="grid-item">
         <a href="{url}/Analisis_del_edificio?token={st.session_state.token}">
-          <img src="https://personal-data-bucket-online.s3.us-east-2.amazonaws.com/buydepa/2_building_analysis.png" width="400" height="300">
+          <img src="https://personal-data-bucket-online.s3.us-east-2.amazonaws.com/buydepa/2_1_building_analysis.png" width="400" height="300">
         </a>
         <p>Análisis por Edificio</p>
       </div>
       <div class="grid-item">
         <a href="{url}/Analisis_de_precio?token={st.session_state.token}">
-          <img src="https://personal-data-bucket-online.s3.us-east-2.amazonaws.com/buydepa/4_pricing.png" width="400" height="300">
+          <img src="https://personal-data-bucket-online.s3.us-east-2.amazonaws.com/buydepa/4_1_pricing.png" width="400" height="300">
         </a>
         <p>Análisis de precio</p>
       </div>
       <div class="grid-item">
         <a href="{url}/Ficha_del_inmueble">
-          <img src="https://personal-data-bucket-online.s3.us-east-2.amazonaws.com/buydepa/3_ficha.png" width="400" height="300">
+          <img src="https://personal-data-bucket-online.s3.us-east-2.amazonaws.com/buydepa/3_1_ficha.png" width="400" height="300">
         </a>
         <p>Ficha del inmueble</p>
       </div>
