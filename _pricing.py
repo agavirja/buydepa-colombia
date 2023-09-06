@@ -44,7 +44,8 @@ def main():
         areaconstruida = st.number_input('Área construida',step=1)
         banos          = st.selectbox('Baños',options=[1,2,3,4,5,6],index=1)
         estrato        = st.selectbox('Estrato',options=[1,2,3,4,5,6],index=2)
-
+        areaterraza    = st.number_input('Área de la terraza',step=1,value=0)
+        
     with col2:
         ciudad         = st.selectbox('País',options=['Bogota'])
         tipoinmueble   = st.selectbox('Tipo de inmueble',options=['Apartamento','Casa'])
@@ -77,6 +78,12 @@ def main():
                     
         forecast_venta,forecast_arriendo,forecastlist,latitud,longitud,dataconjunto,datapredios,datalote,datamarketventa,datamarketarriendo,datagaleria,dataventazona,dataarriendozona = getforecast(inputvar)
 
+        if areaterraza>0:
+            valormt2_venta    = forecast_venta/areaconstruida
+            valormt2_arriendo = forecast_arriendo/areaconstruida
+            forecast_venta    = forecast_venta + (valormt2_venta/3)*areaterraza
+            forecast_arriendo = forecast_arriendo + (valormt2_arriendo/3)*areaterraza
+        
         with col3:
             html = f"""
             <!DOCTYPE html>
