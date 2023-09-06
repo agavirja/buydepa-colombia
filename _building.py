@@ -1571,18 +1571,18 @@ def main():
         </body>
         </html>
         """
-    components.html(
+        components.html(
+            """
+        <script>
+        const elements = window.parent.document.querySelectorAll('.stButton button')
+        elements[0].style.width = '100%';
+        elements[1].style.width = '100%';
+        elements[2].style.width = '100%';
+        elements[3].style.width = '100%';
+        elements[4].style.width = '100%';
+        </script>
         """
-    <script>
-    const elements = window.parent.document.querySelectorAll('.stButton button')
-    elements[0].style.width = '100%';
-    elements[1].style.width = '100%';
-    elements[2].style.width = '100%';
-    elements[3].style.width = '100%';
-    elements[4].style.width = '100%';
-    </script>
-    """
-    ) 
+        ) 
         #st.title("Lista Desplegable HTML en Streamlit")
         #resultado = st.components.v1.html(html, height=300)
     
