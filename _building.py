@@ -1332,7 +1332,7 @@ def main():
             except: pass
             try:
                 iddb = (barriopricing['tiponegocio']==market_tiponegocio) & (barriopricing['tipo']=='barrio')
-                barriopricingobs = f"{barriopricing[iddb]['obs']:,}"
+                barriopricingobs = f"{barriopricing[iddb]['obs'].iloc[0]:,}"
             except: pass
             try:
                 iddv = (barriovalorizacion['tiponegocio']==market_tiponegocio) & (barriovalorizacion['tipo']=='barrio')
