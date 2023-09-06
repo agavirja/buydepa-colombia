@@ -255,6 +255,7 @@ def main():
             snr_valorxmt2     = ""
             snr_tabla         = ""
             dataprocesosdocid = dataprocesos.copy()
+            st.write(list(dataprocesosdocid))
             if dataprocesos.empty is False:
                 dataprocesos = dataprocesos[dataprocesos['codigo'].isin(['0125','125','0168','168'])]
                 
