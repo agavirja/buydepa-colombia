@@ -2,6 +2,7 @@ import streamlit as st
 import folium
 import pandas as pd
 import json
+import streamlit.components.v1 as components
 
 from bs4 import BeautifulSoup
 from shapely.geometry import mapping
@@ -1330,7 +1331,7 @@ def main():
             except: pass
             try:
                 iddb = (barriopricing['tiponegocio']==market_tiponegocio) & (barriopricing['tipo']=='barrio')
-                barriopricingobs = f"${barriopricing[iddb]['obs'].iloc[0]:,.0f}"
+                barriopricingobs = f"{barriopricing[iddb]['obs']:,}"
             except: pass
             try:
                 iddv = (barriovalorizacion['tiponegocio']==market_tiponegocio) & (barriovalorizacion['tipo']=='barrio')
@@ -1570,7 +1571,18 @@ def main():
         </body>
         </html>
         """
-        
+    components.html(
+        """
+    <script>
+    const elements = window.parent.document.querySelectorAll('.stButton button')
+    elements[0].style.width = '100%';
+    elements[1].style.width = '100%';
+    elements[2].style.width = '100%';
+    elements[3].style.width = '100%';
+    elements[4].style.width = '100%';
+    </script>
+    """
+    ) 
         #st.title("Lista Desplegable HTML en Streamlit")
         #resultado = st.components.v1.html(html, height=300)
     
